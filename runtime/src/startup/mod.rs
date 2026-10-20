@@ -5,8 +5,10 @@ use libtock_platform::{Syscalls, Termination};
 
 // Include the correct `start` symbol (the program entry point) for the
 // architecture.
-#[cfg(target_arch = "arm")]
+#[cfg(all(target_arch = "arm", arm_isa = "t32"))]
 core::arch::global_asm!(include_str!("asm_arm.s"));
+#[cfg(all(target_arch = "arm", arm_isa = "a32"))]
+core::arch::global_asm!(include_str!("asm_arm_a32.s"));
 #[cfg(target_arch = "riscv32")]
 core::arch::global_asm!(include_str!("asm_riscv32.s"));
 #[cfg(target_arch = "x86")]

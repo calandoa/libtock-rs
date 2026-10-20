@@ -21,3 +21,6 @@ libtock_platform = { path = "../platform" }
 # and 28 bytes on RISC-V. To remove them (for the purpose of minimizing code
 # size), enable the no_debug_memop feature.
 no_debug_memop = []
+
+[build-dependencies]
+arm-targets = "0.4.2"
