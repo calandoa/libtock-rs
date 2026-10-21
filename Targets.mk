@@ -39,32 +39,32 @@
 concat = $(subst =,,$(subst $(eval ) ,,$1))
 fixed-target = $(foreach A,$1,$(eval $(call concat,$1): $A)) $(eval ELF_TARGETS += $(call concat,$1))
 
-$(call fixed-target, F=0x00030000 R=0x20008000 T=thumbv7em-none-eabi A=cortex-m4)
-$(call fixed-target, F=0x00038000 R=0x20010000 T=thumbv7em-none-eabi A=cortex-m4)
-
-$(call fixed-target, F=0x00040000 R=0x10002000 T=thumbv7em-none-eabi A=cortex-m4)
-$(call fixed-target, F=0x00048000 R=0x1000a000 T=thumbv7em-none-eabi A=cortex-m4)
-
-$(call fixed-target, F=0x00040000 R=0x20008000 T=thumbv7em-none-eabi A=cortex-m4)
-$(call fixed-target, F=0x00042000 R=0x2000a000 T=thumbv7em-none-eabi A=cortex-m4)
-$(call fixed-target, F=0x00048000 R=0x20010000 T=thumbv7em-none-eabi A=cortex-m4)
-
-$(call fixed-target, F=0x00080000 R=0x20006000 T=thumbv7em-none-eabi A=cortex-m4)
-$(call fixed-target, F=0x00088000 R=0x2000e000 T=thumbv7em-none-eabi A=cortex-m4)
-
-$(call fixed-target, F=0x403b0000 R=0x3fca2000 T=riscv32imc-unknown-none-elf A=rv32imc)
-$(call fixed-target, F=0x40440000 R=0x3fcaa000 T=riscv32imc-unknown-none-elf A=rv32imc)
-
-$(call fixed-target, F=0x80100000 R=0x80300000 T=riscv32imac-unknown-none-elf A=rv32imac)
-$(call fixed-target, F=0x80110000 R=0x80310000 T=riscv32imac-unknown-none-elf A=rv32imac)
-$(call fixed-target, F=0x80130000 R=0x80330000 T=riscv32imac-unknown-none-elf A=rv32imac)
-$(call fixed-target, F=0x80180000 R=0x80380000 T=riscv32imac-unknown-none-elf A=rv32imac)
-
-$(call fixed-target, F=0x10020000 R=0x20004000 T=thumbv6m-none-eabi A=cortex-m0)
-$(call fixed-target, F=0x10028000 R=0x2000c000 T=thumbv6m-none-eabi A=cortex-m0)
-
-$(call fixed-target, F=0x10040000 R=0x20020000 T=thumbv8m.main-none-eabi A=cortex-m33)
-$(call fixed-target, F=0x10060000 R=0x20028000 T=thumbv8m.main-none-eabi A=cortex-m33)
+# $(call fixed-target, F=0x00030000 R=0x20008000 T=thumbv7em-none-eabi A=cortex-m4)
+# $(call fixed-target, F=0x00038000 R=0x20010000 T=thumbv7em-none-eabi A=cortex-m4)
+# 
+# $(call fixed-target, F=0x00040000 R=0x10002000 T=thumbv7em-none-eabi A=cortex-m4)
+# $(call fixed-target, F=0x00048000 R=0x1000a000 T=thumbv7em-none-eabi A=cortex-m4)
+# 
+# $(call fixed-target, F=0x00040000 R=0x20008000 T=thumbv7em-none-eabi A=cortex-m4)
+# $(call fixed-target, F=0x00042000 R=0x2000a000 T=thumbv7em-none-eabi A=cortex-m4)
+# $(call fixed-target, F=0x00048000 R=0x20010000 T=thumbv7em-none-eabi A=cortex-m4)
+# 
+# $(call fixed-target, F=0x00080000 R=0x20006000 T=thumbv7em-none-eabi A=cortex-m4)
+# $(call fixed-target, F=0x00088000 R=0x2000e000 T=thumbv7em-none-eabi A=cortex-m4)
+# 
+# $(call fixed-target, F=0x403b0000 R=0x3fca2000 T=riscv32imc-unknown-none-elf A=rv32imc)
+# $(call fixed-target, F=0x40440000 R=0x3fcaa000 T=riscv32imc-unknown-none-elf A=rv32imc)
+# 
+# $(call fixed-target, F=0x80100000 R=0x80300000 T=riscv32imac-unknown-none-elf A=rv32imac)
+# $(call fixed-target, F=0x80110000 R=0x80310000 T=riscv32imac-unknown-none-elf A=rv32imac)
+# $(call fixed-target, F=0x80130000 R=0x80330000 T=riscv32imac-unknown-none-elf A=rv32imac)
+# $(call fixed-target, F=0x80180000 R=0x80380000 T=riscv32imac-unknown-none-elf A=rv32imac)
+# 
+# $(call fixed-target, F=0x10020000 R=0x20004000 T=thumbv6m-none-eabi A=cortex-m0)
+# $(call fixed-target, F=0x10028000 R=0x2000c000 T=thumbv6m-none-eabi A=cortex-m0)
+# 
+# $(call fixed-target, F=0x10040000 R=0x20020000 T=thumbv8m.main-none-eabi A=cortex-m33)
+# $(call fixed-target, F=0x10060000 R=0x20028000 T=thumbv8m.main-none-eabi A=cortex-m33)
 
 $(call fixed-target, F=0x08200000 R=0x10002000 T=armv8r-none-eabihf A=cortex-r52)
 $(call fixed-target, F=0x08300000 R=0x10003000 T=armv8r-none-eabihf A=cortex-r52)

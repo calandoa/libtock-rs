@@ -52,7 +52,7 @@ impl Convert for Milliseconds {
                 d + 1
             }
         }
-        Ticks(div_ceil(self.0.saturating_mul(freq.0), 1000))
+        Ticks(div_ceil(freq.0, 1000).saturating_mul(self.0))
     }
 }
 
