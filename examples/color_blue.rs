@@ -12,16 +12,16 @@ use libtock::alarm::{Alarm, Milliseconds, Ticks};
 use libtock::runtime::{set_main, stack_size};
 
 set_main! {main}
-stack_size! {0x100}
+stack_size! {0x200}
 
-const COLOR: &str = "36mCyan";
+const COLOR: &str = "34mBlue";
 
 fn main() {
 
     let mut console_writer = Console::writer();
 	loop { 
 		let ms = Alarm::get_milliseconds().unwrap();
-	    let _ = writeln!(console_writer, "\x1b[0;{}!\t{}\x1b[0m", COLOR,ms);
-		Alarm::sleep_for(Milliseconds(3000)).unwrap();		
+	    let _ = writeln!(console_writer, "\x1b[0;{}!\t{}\x1b[0m", COLOR, ms);
+		Alarm::sleep_for(Milliseconds(1000)).unwrap();		
 	}
 }
