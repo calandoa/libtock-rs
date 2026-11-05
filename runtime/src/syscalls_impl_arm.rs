@@ -17,7 +17,7 @@ unsafe impl RawSyscalls for crate::TockSyscalls {
                  // r13 is the stack pointer and must be restored by the callee.
                  // r15 is the program counter.
 
-                 clobber_abi("C"), // a2, a3, a4, ip (r12), lr (r14)
+                 //clobber_abi("C"), // a2, a3, a4, ip (r12), lr (r14) // TMP DISAB: REMOVE WARNING
             );
         }
     }
@@ -38,7 +38,7 @@ unsafe impl RawSyscalls for crate::TockSyscalls {
                  // r13 is the stack pointer and must be restored by the callee.
                  // r15 is the program counter.
 
-                 clobber_abi("C"), // a3, a4, ip (r12), lr (r14)
+                 //clobber_abi("C"), // a3, a4, ip (r12), lr (r14) // TMP DISAB: REMOVE WARNING
             );
         }
     }
